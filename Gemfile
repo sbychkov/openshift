@@ -5,7 +5,7 @@ gem 'rails', '4.1.4'
 ### OpenShift Online changes:
 
 # Fix the conflict with the system 'rake':
-gem 'rake', '~> 0.9.6'
+gem 'rake'
 
 # Support for databases and environment.
 # Use 'sqlite3' for testing and development and mysql and postgresql
@@ -23,9 +23,9 @@ group :development, :test do
 end
 
 # Add support for the MySQL
-group :production, :mysql do
-  gem 'mysql2'
-end
+#group :production, :mysql do
+#  gem 'mysql2'
+#end
 
 group :production, :postgresql do
   gem 'pg'
@@ -66,3 +66,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'tzinfo'
+gem 'tzinfo-data'
+
+gem 'russian'
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
