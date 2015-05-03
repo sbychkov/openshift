@@ -1,0 +1,963 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//colors
+$color_log_cabin_approx: #222;
+$color_tapa_approx: #777;
+$color_sunglow_approx: #fed136;
+$color_supernova_approx: #fec503;
+$color_black_haze_approx: #f7f7f7;
+$white: #fff;
+$color_amber_approx: #f6bf01;
+$white_2: rgba(255,255,255,.02);
+$color_sunglow_90_approx: rgba(254,209,54,.9);
+$seashell: #f1f1f1;
+$color_pink_swan_approx: #bbb;
+$color_cinnabar_approx: #e74c3c;
+
+//fonts
+$font_0: 'Droid Serif';
+$font_1: 'Helvetica Neue';
+$font_2: 'Helvetica';
+$font_3: 'Arial';
+$font_4: 'sans-serif';
+$font_5: 'Montserrat';
+$font_6: 'Helvetica Neue';
+$font_7: 'Helvetica';
+$font_8: 'Arial';
+$font_9: 'sans-serif';
+$font_10: 'Roboto Slab';
+$font_11: 'Helvetica Neue';
+$font_12: 'Helvetica';
+$font_13: 'Arial';
+$font_14: 'sans-serif';
+$font_15: 'Montserrat';
+$font_16: 'Helvetica Neue';
+$font_17: 'Helvetica';
+$font_18: 'Arial';
+$font_19: 'sans-serif';
+$font_20: 'Montserrat';
+$font_21: 'Helvetica Neue';
+$font_22: 'Helvetica';
+$font_23: 'Arial';
+$font_24: 'sans-serif';
+$font_25: 'Montserrat';
+$font_26: 'Helvetica Neue';
+$font_27: 'Helvetica';
+$font_28: 'Arial';
+$font_29: 'sans-serif';
+$font_30: 'Kaushan Script';
+$font_31: 'Helvetica Neue';
+$font_32: 'Helvetica';
+$font_33: 'Arial';
+$font_34: 'cursive';
+$font_35: 'Montserrat';
+$font_36: 'Helvetica Neue';
+$font_37: 'Helvetica';
+$font_38: 'Arial';
+$font_39: 'sans-serif';
+$font_40: 'Droid Serif';
+$font_41: 'Helvetica Neue';
+$font_42: 'Helvetica';
+$font_43: 'Arial';
+$font_44: 'sans-serif';
+$font_45: 'Montserrat';
+$font_46: 'Helvetica Neue';
+$font_47: 'Helvetica';
+$font_48: 'Arial';
+$font_49: 'sans-serif';
+$font_50: 'Droid Serif';
+$font_51: 'Helvetica Neue';
+$font_52: 'Helvetica';
+$font_53: 'Arial';
+$font_54: 'sans-serif';
+$font_55: 'Droid Serif';
+$font_56: 'Helvetica Neue';
+$font_57: 'Helvetica';
+$font_58: 'Arial';
+$font_59: 'sans-serif';
+$font_60: 'Montserrat';
+$font_61: 'Helvetica Neue';
+$font_62: 'Helvetica';
+$font_63: 'Arial';
+$font_64: 'sans-serif';
+$font_65: 'Montserrat';
+$font_66: 'Helvetica Neue';
+$font_67: 'Helvetica';
+$font_68: 'Arial';
+$font_69: 'sans-serif';
+$font_70: 'Montserrat';
+$font_71: 'Helvetica Neue';
+$font_72: 'Helvetica';
+$font_73: 'Arial';
+$font_74: 'sans-serif';
+$font_75: 'Montserrat';
+$font_76: 'Helvetica Neue';
+$font_77: 'Helvetica';
+$font_78: 'Arial';
+$font_79: 'sans-serif';
+$font_80: 'Montserrat';
+$font_81: 'Helvetica Neue';
+$font_82: 'Helvetica';
+$font_83: 'Arial';
+$font_84: 'sans-serif';
+$font_85: 'Montserrat';
+$font_86: 'Helvetica Neue';
+$font_87: 'Helvetica';
+$font_88: 'Arial';
+$font_89: 'sans-serif';
+$font_90: 'Droid Serif';
+$font_91: 'Helvetica Neue';
+$font_92: 'Helvetica';
+$font_93: 'Arial';
+$font_94: 'sans-serif';
+
+//urls
+$url_0: url('factory.jpg');
+$url_1: url('map-image.png');
+
+//@extend-elements
+//original selectors
+//h1, h2, h3, h4, h5, h6
+%extend_1 {
+  text-transform: uppercase;
+  font-family: $font_15, $font_16, $font_17, $font_18, $font_19;
+  font-weight: 700;
+}
+
+//original selectors
+//.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary
+%extend_2 {
+  border-color: $color_amber_approx;
+  color: $white;
+  background-color: $color_supernova_approx;
+}
+
+//original selectors
+//.btn-xl:hover, .btn-xl:focus, .btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl
+%extend_3 {
+  border-color: $color_amber_approx;
+  color: $white;
+  background-color: $color_supernova_approx;
+}
+
+
+body {
+  overflow-x: hidden;
+  font-family: $font_10, $font_11, $font_12, $font_13, $font_14;
+  webkit-tap-highlight-color: $color_sunglow_approx;
+}
+.text-muted {
+  color: $color_tapa_approx;
+}
+.text-primary {
+  color: $color_sunglow_approx;
+}
+p {
+  font-size: 14px;
+  line-height: 1.75;
+  &.large {
+    font-size: 16px;
+  }
+}
+a {
+  outline: 0;
+  color: $color_sunglow_approx;
+  &:hover {
+    outline: 0;
+    color: $color_supernova_approx;
+  }
+  &:focus {
+    outline: 0;
+    color: $color_supernova_approx;
+  }
+  &:active {
+    outline: 0;
+    color: $color_supernova_approx;
+  }
+  &.active {
+    outline: 0;
+    color: $color_supernova_approx;
+  }
+}
+h1 {
+  @extend %extend_1;
+}
+h2 {
+  @extend %extend_1;
+}
+h3 {
+  @extend %extend_1;
+}
+h4 {
+  @extend %extend_1;
+}
+h5 {
+  @extend %extend_1;
+}
+h6 {
+  @extend %extend_1;
+}
+.img-centered {
+  margin: 0 auto;
+}
+.bg-light-gray {
+  background-color: $color_black_haze_approx;
+}
+.bg-darkest-gray {
+  background-color: $color_log_cabin_approx;
+}
+.btn-primary {
+  border-color: $color_sunglow_approx;
+  text-transform: uppercase;
+  font-family: $font_20, $font_21, $font_22, $font_23, $font_24;
+  font-weight: 700;
+  color: $white;
+  background-color: $color_sunglow_approx;
+  &:hover {
+    @extend %extend_2;
+  }
+  &:focus {
+    @extend %extend_2;
+  }
+  &:active {
+    @extend %extend_2;
+    background-image: none;
+  }
+  &.active {
+    @extend %extend_2;
+    background-image: none;
+  }
+  &.disabled {
+    border-color: $color_sunglow_approx;
+    background-color: $color_sunglow_approx;
+    &:hover {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+    &:focus {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+    &:active {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+    &.active {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+  }
+  .badge {
+    color: $color_sunglow_approx;
+    background-color: $white;
+  }
+}
+.btn-primary[disabled] {
+  border-color: $color_sunglow_approx;
+  background-color: $color_sunglow_approx;
+  &:hover {
+    border-color: $color_sunglow_approx;
+    background-color: $color_sunglow_approx;
+  }
+  &:focus {
+    border-color: $color_sunglow_approx;
+    background-color: $color_sunglow_approx;
+  }
+  &:active {
+    border-color: $color_sunglow_approx;
+    background-color: $color_sunglow_approx;
+  }
+  &.active {
+    border-color: $color_sunglow_approx;
+    background-color: $color_sunglow_approx;
+  }
+}
+fieldset[disabled] {
+  .btn-primary {
+    border-color: $color_sunglow_approx;
+    background-color: $color_sunglow_approx;
+    &:hover {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+    &:focus {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+    &:active {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+    &.active {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+  }
+  .btn-xl {
+    border-color: $color_sunglow_approx;
+    background-color: $color_sunglow_approx;
+    &:hover {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+    &:focus {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+    &:active {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+    &.active {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+  }
+}
+.btn-xl {
+  padding: 20px 40px;
+  border-color: $color_sunglow_approx;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: $font_25, $font_26, $font_27, $font_28, $font_29;
+  font-size: 18px;
+  font-weight: 700;
+  color: $white;
+  background-color: $color_sunglow_approx;
+  &:hover {
+    @extend %extend_3;
+  }
+  &:focus {
+    @extend %extend_3;
+  }
+  &:active {
+    @extend %extend_3;
+    background-image: none;
+  }
+  &.active {
+    @extend %extend_3;
+    background-image: none;
+  }
+  &.disabled {
+    border-color: $color_sunglow_approx;
+    background-color: $color_sunglow_approx;
+    &:hover {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+    &:focus {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+    &:active {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+    &.active {
+      border-color: $color_sunglow_approx;
+      background-color: $color_sunglow_approx;
+    }
+  }
+  .badge {
+    color: $color_sunglow_approx;
+    background-color: $white;
+  }
+}
+.btn-xl[disabled] {
+  border-color: $color_sunglow_approx;
+  background-color: $color_sunglow_approx;
+  &:hover {
+    border-color: $color_sunglow_approx;
+    background-color: $color_sunglow_approx;
+  }
+  &:focus {
+    border-color: $color_sunglow_approx;
+    background-color: $color_sunglow_approx;
+  }
+  &:active {
+    border-color: $color_sunglow_approx;
+    background-color: $color_sunglow_approx;
+  }
+  &.active {
+    border-color: $color_sunglow_approx;
+    background-color: $color_sunglow_approx;
+  }
+}
+.navbar-default {
+  border-color: transparent;
+  background-color: $color_log_cabin_approx;
+  .navbar-brand {
+    font-family: $font_30, $font_31, $font_32, $font_33, $font_34;
+    color: $color_sunglow_approx;
+    &:hover {
+      color: $color_supernova_approx;
+    }
+    &:focus {
+      color: $color_supernova_approx;
+    }
+    &:active {
+      color: $color_supernova_approx;
+    }
+    &.active {
+      color: $color_supernova_approx;
+    }
+  }
+  .navbar-collapse {
+    border-color: $white_2;
+  }
+  .navbar-toggle {
+    border-color: $color_sunglow_approx;
+    background-color: $color_sunglow_approx;
+    .icon-bar {
+      background-color: $white;
+    }
+    &:hover {
+      background-color: $color_sunglow_approx;
+    }
+    &:focus {
+      background-color: $color_sunglow_approx;
+    }
+  }
+  .nav li a {
+    text-transform: uppercase;
+    font-family: $font_35, $font_36, $font_37, $font_38, $font_39;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: $white;
+    &:hover {
+      outline: 0;
+      color: $color_sunglow_approx;
+    }
+    &:focus {
+      outline: 0;
+      color: $color_sunglow_approx;
+    }
+  }
+  .navbar-nav>.active>a {
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 0;
+    color: $white;
+    background-color: $color_sunglow_approx;
+    &:hover {
+      color: $white;
+      background-color: $color_supernova_approx;
+    }
+    &:focus {
+      color: $white;
+      background-color: $color_supernova_approx;
+    }
+  }
+}
+@media(min-width:768px) {
+  .timeline>li {
+    margin-bottom: 100px;
+    min-height: 100px;
+    .timeline-panel {
+      float: left;
+      width: 41%;
+      padding: 0 20px 20px 30px;
+      text-align: right;
+    }
+    .timeline-image {
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      margin-left: -50px;
+      h4 {
+        margin-top: 16px;
+        font-size: 13px;
+        line-height: 18px;
+      }
+    }
+    &.timeline-inverted>.timeline-panel {
+      float: right;
+      padding: 0 30px 20px 20px;
+      text-align: left;
+    }
+  }
+  .timeline:before {
+    left: 50%;
+  }
+}
+header {
+  text-align: center;
+  color: $white;
+  background-attachment: scroll;
+  background-image: $url_0;
+  background-position: center center;
+  //background-repeat: none;
+  background-size: cover;
+  .intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    .intro-lead-in {
+      margin-bottom: 25px;
+      font-family: $font_40, $font_41, $font_42, $font_43, $font_44;
+      font-size: 22px;
+      font-style: italic;
+      line-height: 22px;
+    }
+    .intro-heading {
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      font-family: $font_45, $font_46, $font_47, $font_48, $font_49;
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 50px;
+    }
+  }
+}
+section {
+  padding: 100px 0;
+  &#contact {
+    background-color: $color_log_cabin_approx;
+    background-image: $url_1;
+    background-position: center;
+    background-repeat: no-repeat;
+    .section-heading {
+      color: $white;
+    }
+    .form-group {
+      margin-bottom: 25px;
+      input {
+        padding: 20px;
+        &.form-control {
+          height: auto;
+        }
+      }
+      textarea {
+        padding: 20px;
+        &.form-control {
+          height: 236px;
+        }
+      }
+    }
+    &:-moz-placeholder {
+      text-transform: uppercase;
+      font-family: $font_65, $font_66, $font_67, $font_68, $font_69;
+      font-weight: 700;
+      color: $color_pink_swan_approx;
+    }
+    &:-ms-input-placeholder {
+      text-transform: uppercase;
+      font-family: $font_75, $font_76, $font_77, $font_78, $font_79;
+      font-weight: 700;
+      color: $color_pink_swan_approx;
+    }
+    .text-danger {
+      color: $color_cinnabar_approx;
+    }
+    .form-control:focus {
+      border-color: $color_sunglow_approx;
+      //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: none;
+    }
+  }
+  &#contact::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-family: $font_60, $font_61, $font_62, $font_63, $font_64;
+    font-weight: 700;
+    color: $color_pink_swan_approx;
+  }
+  &#contact::-moz-placeholder {
+    text-transform: uppercase;
+    font-family: $font_70, $font_71, $font_72, $font_73, $font_74;
+    font-weight: 700;
+    color: $color_pink_swan_approx;
+  }
+  h2.section-heading {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 40px;
+  }
+  h3.section-subheading {
+    margin-bottom: 75px;
+    text-transform: none;
+    font-family: $font_50, $font_51, $font_52, $font_53, $font_54;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+.service-heading {
+  margin: 15px 0;
+  text-transform: none;
+}
+#portfolio {
+  .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+    .portfolio-link {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      max-width: 400px;
+      .portfolio-hover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: $color_sunglow_90_approx;
+        //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: all ease .5s;
+        &:hover {
+          opacity: 1;
+        }
+        .portfolio-hover-content {
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          height: 20px;
+          margin-top: -12px;
+          text-align: center;
+          font-size: 20px;
+          color: $white;
+          i {
+            margin-top: -12px;
+          }
+          h3 {
+            margin: 0;
+          }
+          h4 {
+            margin: 0;
+          }
+        }
+      }
+    }
+    .portfolio-caption {
+      margin: 0 auto;
+      padding: 25px;
+      max-width: 400px;
+      text-align: center;
+      background-color: $white;
+      h4 {
+        margin: 0;
+        text-transform: none;
+      }
+      p {
+        margin: 0;
+        font-family: $font_55, $font_56, $font_57, $font_58, $font_59;
+        font-size: 16px;
+        font-style: italic;
+      }
+    }
+  }
+  * {
+    z-index: 2;
+  }
+}
+@media(min-width:767px) {
+  #portfolio .portfolio-item {
+    margin: 0 0 30px;
+  }
+}
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    background-color: $seashell;
+  }
+  .timeline-body>p {
+    margin-bottom: 0;
+  }
+  .timeline-body>ul {
+    margin-bottom: 0;
+  }
+  .timeline-heading h4 {
+    margin-top: 0;
+    color: inherit;
+    &.subheading {
+      text-transform: none;
+    }
+  }
+}
+.timeline>li {
+  position: relative;
+  margin-bottom: 50px;
+  min-height: 50px;
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  .timeline-panel {
+    float: right;
+    position: relative;
+    width: 100%;
+    padding: 0 20px 0 100px;
+    text-align: left;
+    &:before {
+      right: auto;
+      left: -15px;
+      border-right-width: 15px;
+      border-left-width: 0;
+    }
+    &:after {
+      right: auto;
+      left: -14px;
+      border-right-width: 14px;
+      border-left-width: 0;
+    }
+  }
+  .timeline-image {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    border: 7px solid $seashell;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 100%;
+    text-align: center;
+    color: $white;
+    background-color: $color_sunglow_approx;
+    h4 {
+      margin-top: 12px;
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &.timeline-inverted>.timeline-panel {
+    float: right;
+    padding: 0 20px 0 100px;
+    text-align: left;
+    &:before {
+      right: auto;
+      left: -15px;
+      border-right-width: 15px;
+      border-left-width: 0;
+    }
+    &:after {
+      right: auto;
+      left: -14px;
+      border-right-width: 14px;
+      border-left-width: 0;
+    }
+  }
+}
+@media(min-width:992px) {
+  .timeline>li {
+    min-height: 150px;
+    .timeline-panel {
+      padding: 0 20px 20px;
+    }
+    .timeline-image {
+      width: 150px;
+      height: 150px;
+      margin-left: -75px;
+      h4 {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    &.timeline-inverted>.timeline-panel {
+      padding: 0 20px 20px;
+    }
+  }
+}
+@media(min-width:1200px) {
+  .timeline>li {
+    min-height: 170px;
+    .timeline-panel {
+      padding: 0 20px 20px 100px;
+    }
+    .timeline-image {
+      width: 170px;
+      height: 170px;
+      margin-left: -85px;
+      h4 {
+        margin-top: 40px;
+      }
+    }
+    &.timeline-inverted>.timeline-panel {
+      padding: 0 100px 20px 20px;
+    }
+  }
+}
+.team-member {
+  margin-bottom: 50px;
+  text-align: center;
+  img {
+    margin: 0 auto;
+    border: 7px solid $white;
+  }
+  h4 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-transform: none;
+  }
+  p {
+    margin-top: 0;
+  }
+}
+footer {
+  padding: 25px 0;
+  text-align: center;
+  span.copyright {
+    text-transform: none;
+    font-family: $font_80, $font_81, $font_82, $font_83, $font_84;
+    line-height: 40px;
+  }
+  ul.quicklinks {
+    margin-bottom: 0;
+    text-transform: none;
+    font-family: $font_85, $font_86, $font_87, $font_88, $font_89;
+    line-height: 40px;
+  }
+}
+.btn {
+  &:focus {
+    outline: 0;
+  }
+  &:active {
+    outline: 0;
+    &:focus {
+      outline: 0;
+    }
+  }
+  &.active {
+    outline: 0;
+  }
+}
+.portfolio-modal {
+  .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 0;
+    text-align: center;
+    //Instead of the line below you could use @includebackground-clip($clip)
+    background-clip: border-box;
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    h2 {
+      margin-bottom: 15px;
+      font-size: 3em;
+    }
+    p {
+      margin-bottom: 30px;
+      &.item-intro {
+        margin: 20px 0 30px;
+        font-family: $font_90, $font_91, $font_92, $font_93, $font_94;
+        font-size: 16px;
+        font-style: italic;
+      }
+    }
+    img {
+      margin-bottom: 30px;
+    }
+    ul.list-inline {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+  }
+  .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover {
+      opacity: .3;
+    }
+    .lr {
+      z-index: 1051;
+      width: 1px;
+      height: 75px;
+      margin-left: 35px;
+      background-color: $color_log_cabin_approx;
+      //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: rotate(45deg);
+      .rl {
+        z-index: 1052;
+        width: 1px;
+        height: 75px;
+        background-color: $color_log_cabin_approx;
+        //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .modal-backdrop {
+    display: none;
+    opacity: 0;
+  }
+}
+::-moz-selection {
+  //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  text-shadow: none;
+  background: $color_sunglow_approx;
+}
+::selection {
+  //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  text-shadow: none;
+  background: $color_sunglow_approx;
+}
+img::selection {
+  background: 0 0;
+}
+img::-moz-selection {
+  background: 0 0;
+}
+.open .dropdown-toggle {
+  &.btn-primary {
+    @extend %extend_2;
+    background-image: none;
+  }
+  &.btn-xl {
+    @extend %extend_3;
+    background-image: none;
+  }
+}
+aside.clients img {
+  margin: 50px auto;
+}
+ul.social-buttons {
+  margin-bottom: 0;
+  li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    outline: 0;
+    color: $white;
+    background-color: $color_log_cabin_approx;
+    //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all .3s;
+    &:hover {
+      background-color: $color_sunglow_approx;
+    }
+    &:focus {
+      background-color: $color_sunglow_approx;
+    }
+    &:active {
+      background-color: $color_sunglow_approx;
+    }
+  }
+}
