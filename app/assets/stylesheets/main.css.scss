@@ -114,8 +114,8 @@ $font_93: 'Arial';
 $font_94: 'sans-serif';
 
 //urls
-$url_0: url('factory.jpg');
-$url_1: url('map-image.png');
+$url_0: 'factory.jpg';
+$url_1: 'map-image.png';
 
 //@extend-elements
 //original selectors
@@ -485,8 +485,10 @@ fieldset[disabled] {
 header {
   text-align: center;
   color: $white;
-  background: $url_0 none scroll center center;
-  background-size: cover;
+  background-position: center;
+  background-image: image_url($url_0);
+ // background-attachment: scroll;
+ // background-size: cover;
   .intro-text {
     padding-top: 100px;
     padding-bottom: 50px;
@@ -510,7 +512,7 @@ header {
 section {
   padding: 100px 0;
   &#contact {
-    background: $color_log_cabin_approx $url_1 no-repeat center;
+    background:  $color_log_cabin_approx  image_url($url_1) no-repeat center;
     .section-heading {
       color: $white;
     }
