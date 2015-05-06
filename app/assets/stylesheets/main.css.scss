@@ -485,10 +485,7 @@ fieldset[disabled] {
 header {
   text-align: center;
   color: $white;
-  background-attachment: scroll;
-  background-image: $url_0;
-  background-position: center center;
-  //background-repeat: none;
+  background: $url_0 none scroll center center;
   background-size: cover;
   .intro-text {
     padding-top: 100px;
@@ -513,10 +510,7 @@ header {
 section {
   padding: 100px 0;
   &#contact {
-    background-color: $color_log_cabin_approx;
-    background-image: $url_1;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: $color_log_cabin_approx $url_1 no-repeat center;
     .section-heading {
       color: $white;
     }
