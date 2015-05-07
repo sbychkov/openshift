@@ -16,102 +16,6 @@ $seashell: #f1f1f1;
 $color_pink_swan_approx: #bbb;
 $color_cinnabar_approx: #e74c3c;
 
-//fonts
-$font_0: 'Droid Serif';
-$font_1: 'Helvetica Neue';
-$font_2: 'Helvetica';
-$font_3: 'Arial';
-$font_4: 'sans-serif';
-$font_5: 'Montserrat';
-$font_6: 'Helvetica Neue';
-$font_7: 'Helvetica';
-$font_8: 'Arial';
-$font_9: 'sans-serif';
-$font_10: 'Roboto Slab';
-$font_11: 'Helvetica Neue';
-$font_12: 'Helvetica';
-$font_13: 'Arial';
-$font_14: 'sans-serif';
-$font_15: 'Montserrat';
-$font_16: 'Helvetica Neue';
-$font_17: 'Helvetica';
-$font_18: 'Arial';
-$font_19: 'sans-serif';
-$font_20: 'Montserrat';
-$font_21: 'Helvetica Neue';
-$font_22: 'Helvetica';
-$font_23: 'Arial';
-$font_24: 'sans-serif';
-$font_25: 'Montserrat';
-$font_26: 'Helvetica Neue';
-$font_27: 'Helvetica';
-$font_28: 'Arial';
-$font_29: 'sans-serif';
-$font_30: 'Kaushan Script';
-$font_31: 'Helvetica Neue';
-$font_32: 'Helvetica';
-$font_33: 'Arial';
-$font_34: 'cursive';
-$font_35: 'Montserrat';
-$font_36: 'Helvetica Neue';
-$font_37: 'Helvetica';
-$font_38: 'Arial';
-$font_39: 'sans-serif';
-$font_40: 'Droid Serif';
-$font_41: 'Helvetica Neue';
-$font_42: 'Helvetica';
-$font_43: 'Arial';
-$font_44: 'sans-serif';
-$font_45: 'Montserrat';
-$font_46: 'Helvetica Neue';
-$font_47: 'Helvetica';
-$font_48: 'Arial';
-$font_49: 'sans-serif';
-$font_50: 'Droid Serif';
-$font_51: 'Helvetica Neue';
-$font_52: 'Helvetica';
-$font_53: 'Arial';
-$font_54: 'sans-serif';
-$font_55: 'Droid Serif';
-$font_56: 'Helvetica Neue';
-$font_57: 'Helvetica';
-$font_58: 'Arial';
-$font_59: 'sans-serif';
-$font_60: 'Montserrat';
-$font_61: 'Helvetica Neue';
-$font_62: 'Helvetica';
-$font_63: 'Arial';
-$font_64: 'sans-serif';
-$font_65: 'Montserrat';
-$font_66: 'Helvetica Neue';
-$font_67: 'Helvetica';
-$font_68: 'Arial';
-$font_69: 'sans-serif';
-$font_70: 'Montserrat';
-$font_71: 'Helvetica Neue';
-$font_72: 'Helvetica';
-$font_73: 'Arial';
-$font_74: 'sans-serif';
-$font_75: 'Montserrat';
-$font_76: 'Helvetica Neue';
-$font_77: 'Helvetica';
-$font_78: 'Arial';
-$font_79: 'sans-serif';
-$font_80: 'Montserrat';
-$font_81: 'Helvetica Neue';
-$font_82: 'Helvetica';
-$font_83: 'Arial';
-$font_84: 'sans-serif';
-$font_85: 'Montserrat';
-$font_86: 'Helvetica Neue';
-$font_87: 'Helvetica';
-$font_88: 'Arial';
-$font_89: 'sans-serif';
-$font_90: 'Droid Serif';
-$font_91: 'Helvetica Neue';
-$font_92: 'Helvetica';
-$font_93: 'Arial';
-$font_94: 'sans-serif';
 
 body {
   padding-top: 100px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
@@ -166,7 +70,6 @@ footer {
   border-color: transparent;
   background-color: $color_log_cabin_approx;
   .navbar-brand {
-    font-family: $font_30, $font_31, $font_32, $font_33, $font_34;
     color: $color_sunglow_approx;
     &:hover {
       color: $color_supernova_approx;
@@ -199,7 +102,6 @@ footer {
   }
   .nav li a {
     text-transform: uppercase;
-    font-family: $font_35, $font_36, $font_37, $font_38, $font_39;
     font-weight: 400;
     letter-spacing: 1px;
     color: $white;

@@ -1,3 +1,6 @@
+<div class="container">
+<div class="row">
+<div class="thumbnail">
 <h2><%= @product.name %></h2>
 
 <% if @product.default_image %>
@@ -6,12 +9,15 @@
 
 <p><%= @product.short_description %></p>
 <p>
-  <b><%= number_to_currency @product.price %></b>
-  <%= link_to "Add to basket", product_path(@product.permalink), :method => :post %>
+  <b class="pull-right"><%= number_to_currency @product.price %></b>
+  <%= link_to "Add to basket", product_path(@product.permalink), :method => :post, class: "btn btn-xl" %>
 </p>
 
 <hr>
 <%= simple_format @product.description %>
 <hr>
 
-<p><%= link_to "Back to list", shop_path  %></p>
+<p><%= link_to "Back to list", shop_path, class: "btn btn-xl" %></p>
+</div>
+</div>
+</div>
