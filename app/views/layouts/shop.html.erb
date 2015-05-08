@@ -43,21 +43,21 @@
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav text-right">
+      <ul class="nav navbar-nav navbar-right">
         <li>
           <% if current_order %>
-              <p style="border:1px solid black;padding:10px;">
-                You have <%= pluralize current_order.total_items, 'item'%> in your basket which cost
+              <p style="padding:10px;">
+                У Вас <%= pluralize current_order.total_items, 'item'%> в корзине на сумму
                 <%= number_to_currency current_order.total_before_tax %>.
               </p>
           <% end %>
         </li>
         <li>
-          <%= link_to "View basket", basket_path %>
+          <%= link_to "Корзина", basket_path %>
           <%= flash[:notice] %>
         </li>
         <li>
-          <%= link_to "Checkout", checkout_path %>
+          <%= link_to "Оплатить", checkout_path %>
         </li>
       </ul>
     </div>

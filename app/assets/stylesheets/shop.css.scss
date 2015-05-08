@@ -1,8 +1,3 @@
-// Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-//colors
 $color_log_cabin_approx: #222;
 $color_tapa_approx: #777;
 $color_sunglow_approx: #fed136;
@@ -16,60 +11,44 @@ $seashell: #f1f1f1;
 $color_pink_swan_approx: #bbb;
 $color_cinnabar_approx: #e74c3c;
 
+//fonts
+$font_0: 'Droid Serif';
+$font_1: 'Helvetica Neue';
+$font_2: 'Helvetica';
+$font_3: 'Arial';
+$font_4: 'sans-serif';
+$font_5: 'Montserrat';
+$font_10: 'Roboto Slab';
+$font_30: 'Kaushan Script';
+$font_34: 'cursive';
 
-body {
-  padding-top: 100px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-}
 
-.slide-image {
-  width: 100%;
-}
-
-.carousel-holder {
-  margin-bottom: 30px;
-}
-
-.carousel-control,
-.item {
-  border-radius: 4px;
-}
-
-.caption {
-  height: 130px;
-  overflow: hidden;
-}
-
-.caption h4 {
-  white-space: nowrap;
-}
-
-.thumbnail img {
-  width: 100%;
-}
-
-.ratings {
-  padding-right: 10px;
-  padding-left: 10px;
-  color: #d17581;
-}
-
-.thumbnail {
-  padding: 0;
-}
-
-.thumbnail .caption-full {
-  padding: 9px;
-  color: #333;
-}
-
-footer {
-  margin: 50px 0;
+a {
+  outline: 0;
+  color: $color_sunglow_approx;
+  &:hover {
+    outline: 0;
+    color: $color_supernova_approx;
+  }
+  &:focus {
+    outline: 0;
+    color: $color_supernova_approx;
+  }
+  &:active {
+    outline: 0;
+    color: $color_supernova_approx;
+  }
+  &.active {
+    outline: 0;
+    color: $color_supernova_approx;
+  }
 }
 
 .navbar-default {
   border-color: transparent;
   background-color: $color_log_cabin_approx;
   .navbar-brand {
+    font-family: $font_30, $font_1, $font_2, $font_3, $font_34;
     color: $color_sunglow_approx;
     &:hover {
       color: $color_supernova_approx;
@@ -102,6 +81,7 @@ footer {
   }
   .nav li a {
     text-transform: uppercase;
+    font-family: $font_5, $font_1, $font_2, $font_3, $font_4;
     font-weight: 400;
     letter-spacing: 1px;
     color: $white;
@@ -127,24 +107,5 @@ footer {
       color: $white;
       background-color: $color_supernova_approx;
     }
-  }
-}
-
-footer {
-  color: white;
-  position: absolute;
-  bottom: 0;
-  padding: 25px 0;
-  text-align: center;
-  span.copyright {
-    text-transform: none;
-
-    line-height: 40px;
-  }
-  ul.quicklinks {
-    margin-bottom: 0;
-    text-transform: none;
-
-    line-height: 40px;
   }
 }
